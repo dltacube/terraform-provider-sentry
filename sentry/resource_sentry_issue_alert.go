@@ -78,11 +78,12 @@ func resourceSentryIssueAlertSchema() map[string]*schema.Schema {
 		},
 		"actions": {
 			Description: "List of actions.",
-			Type:        schema.TypeList,
-			Required:    true,
-			Elem: &schema.Schema{
-				Type: schema.TypeMap,
-			},
+			//Type:        schema.TypeList,
+			Type:     schema.TypeString,
+			Required: true,
+			//Elem: &schema.Schema{
+			//	Type: schema.TypeMap,
+			//},
 			DiffSuppressFunc: SuppressEquivalentJSONDiffs,
 		},
 		"action_match": {
